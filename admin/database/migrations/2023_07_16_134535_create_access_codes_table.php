@@ -15,11 +15,11 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('access_code')->unique();
-            $table->unsignedBigInteger('path_id')->nullable();
+            $table->unsignedBigInteger('next_id');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('path_id')->references('id')->on('paths');
+            $table->foreign('next_id')->references('id')->on('nexts');
         });
     }
 

@@ -13,11 +13,9 @@ return new class extends Migration
     {
         Schema::create('nexts', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('node_id');
+            $table->string('url');  // /node/{id} or /page/{name}
             $table->string('label');
             $table->timestamps();
-
-            $table->foreign('node_id')->references('id')->on('nodes');
         });
     }
 

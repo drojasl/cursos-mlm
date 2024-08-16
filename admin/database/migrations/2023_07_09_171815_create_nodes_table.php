@@ -15,10 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('url');
-            $table->unsignedBigInteger('previous_node_id');
+            $table->string('speed')->default(1);
+            $table->string('previous_url');
             $table->timestamps();
-
-            $table->foreign('previous_node_id')->references('id')->on('nodes');
         });
     }
 

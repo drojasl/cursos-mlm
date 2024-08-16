@@ -14,11 +14,11 @@ return new class extends Migration
         Schema::create('paths', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('step_id');
+            $table->unsignedBigInteger('node_id');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('step_id')->references('id')->on('steps');
+            $table->foreign('node_id')->references('id')->on('nodes');
         });
     }
 
