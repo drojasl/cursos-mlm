@@ -9,5 +9,11 @@ class Node extends Model
 {
     use HasFactory;
 
-    protected $guarded = ['created_at', 'updated_at'];
+    protected $fillable = [
+        'title',
+        'path_id',
+        'url',
+        'speed',
+        'previous_url',
+    ];
 }

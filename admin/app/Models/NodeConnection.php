@@ -5,13 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Path extends Model
+class NodeConnection extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'title',
-        'user_id',
-        'url',
+        'node_source_id',
+        'node_target_id',
+        'source',
+        'target',
     ];
 }

@@ -5,13 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Path extends Model
+class CustomerCodes extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'title',
-        'user_id',
-        'url',
-    ];
+    protected $table = 'customer_codes';
+
+    protected $fillable = ['code', 'user_id'];
 }
